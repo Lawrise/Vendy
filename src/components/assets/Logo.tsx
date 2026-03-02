@@ -18,7 +18,7 @@ export const Logo = ({ className }: { className?: string }) => {
         d="M151.206 128.75L347.794 128.75L249.5 299L151.206 128.75Z"
         fill="white"
         stroke="#5B5CFF"
-        stroke-width="12"
+        strokeWidth="12"
       />
     </svg>
   );

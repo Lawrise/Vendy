@@ -17,7 +17,7 @@ export const LogoLong = ({ className }: { className?: string }) => {
         d="M91.2061 68.75L287.794 68.75L189.5 239L91.2061 68.75Z"
         fill="white"
         stroke="#5B5CFF"
-        stroke-width="12"
+        strokeWidth="12"
       />
       <mask
         id="path-3-outside-1_2005_138"
