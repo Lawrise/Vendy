@@ -1,10 +1,12 @@
-import Image from "next/image";
+import TelephoneMockup from "../../components/mockup/telephone";
+import Bentogrid from "../../components/mockup/bentoGrid";
+// import TelephoneMockup from "@/components/mockup/telephone";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#F9FAFB] text-[#111827] font-sans">
+    <div className="min-h-screen bg-bgWhite text-myBlack font-sans flex flex-col items-center">
       {/* Header */}
-      <header className="flex justify-between px-6 md:px-12 py-6 items-center">
+      <header className="flex justify-between px-6 md:px-12 py-6 items-center w-full">
         <p className="font-bold text-2xl tracking-tight">
           Vendy<span className="text-indigo-500">.</span>
         </p>
@@ -21,35 +23,57 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <main className="max-w-5xl mx-auto pt-20 pb-12 px-6">
-        <div className="text-center space-y-8">
-          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.1]">
-            Vendez vos services. <br />
-            <span className="text-indigo-500">Gérez vos clients.</span>
-          </h1>
+      <main className="mx-6 md:mx-12 max-w-6xl flex flex-col gap-y-24">
+        <div className="rounded-4xl grid grid-cols-2 bg-electricBlue py-16 px-24">
+          <div className="space-y-8 flex flex-col justify-center">
+            <h1 className="text-3xl md:text-5xl text-white font-extrabold tracking-tight text-start">
+              Vendez vos prestations. <br />
+              <span className="text-accent2">
+                Livrez vos projets sans chaos.
+              </span>
+            </h1>
 
-          <p className="text-xl text-gray-500 max-w-2xl mx-auto leading-relaxed">
-            La boutique tout-en-un pour les créateurs. Encaissez vos paiements
-            et récupérez vos briefs clients au même endroit.
-          </p>
+            <p className="text-xl text-gray-200 max-w-2xl mx-auto leading-relaxed">
+              Le seul link-in-bio qui encaisse vos clients et centralise vos
+              fichiers, revisions et livrable. Fini l&apos;enfer des DMs
+              chaotiques.
+            </p>
 
-          <div className="flex justify-center pt-4">
-            <button className="bg-indigo-500 text-white font-bold py-4 px-10 rounded-full flex items-center gap-3 shadow-lg shadow-blue-200 hover:scale-105 hover:bg-indigo-700 transition-all">
-              Démarrer gratuitement
-              <span className="text-xl">→</span>
+            <button className="flex gap-2 max-w-fit sm:w-auto bg-accent2 text-white font-bold py-2 px-4 rounded-2xl text-lg hover:gap-6 transition-all">
+              Commencer
+              <span>→</span>
             </button>
           </div>
-        </div>
 
-        {/* Maket interface a mettre (mockup) */}
-        <div className="mt-20 relative">
-          <div className="bg-white border border-gray-200 shadow-2xl rounded-[32px] h-[500px] w-full overflow-hidden flex items-center justify-center">
-            <p className="text-gray-400 font-medium italic">
-              [ Capture d'écran de l'interface CRM Vendy ]
-            </p>
+          <TelephoneMockup />
+        </div>
+        <div>
+          <h1 className="text-4xl font-bold text-center mb-12">
+            Pourquoi Vendy
+          </h1>
+          <div className="grid grid-cols-2 gap-24">
+            <div className="border rounded-3xl p-8">
+              <h2 className="text-2xl text-center">Avant Vendy</h2>
+              <ul>
+                <li>Bordel</li>
+                <li>C&apos;est nul</li>
+                <li>pas ouf</li>
+                <li>inspi</li>
+              </ul>
+            </div>
+            <div className="border">
+              <h2>Avec Vendy</h2>
+            </div>
           </div>
         </div>
+        <div>
+          <h1 className="text-4xl font-bold text-center mb-12">
+            Les outils pour une reussite digitale
+          </h1>
+          <Bentogrid />
+        </div>
       </main>
+      <footer className="h-96"></footer>
     </div>
   );
 }
