@@ -5,7 +5,9 @@ import {
   CheckCircle,
   BarChart3,
   ArrowRight,
+  Store,
 } from "lucide-react";
+import Image from "next/image";
 
 export default function BentoGridVendy() {
   return (
@@ -24,10 +26,10 @@ export default function BentoGridVendy() {
               </h3>
               <p className="mt-4 max-w-xs text-slate-500 font-medium">
                 Vos clients reçoivent leurs accès instantanément. Fini
-                l'onboarding manuel par email.
+                l&apos;onboarding manuel par email.
               </p>
             </div>
-            <div className="flex items-center gap-2 text-sm font-bold text-[#2EE6A6] bg-black w-fit px-4 py-2 rounded-full">
+            <div className="flex items-center gap-2 text-sm font-bold text-white bg-accent2 w-fit px-4 py-2 rounded-full">
               <CheckCircle size={16} /> Flux automatisé activé
             </div>
           </div>
@@ -37,7 +39,7 @@ export default function BentoGridVendy() {
 
         {/* --- Bloc : Paiements & Facturation --- */}
         <div className="group relative col-span-12 md:col-span-4 row-span-2 overflow-hidden rounded-3xl bg-[#5B5CFF] p-8 transition-all hover:shadow-[0_20px_40px_rgba(91,92,255,0.3)] tracking-tight text-white">
-          <div className="relative z-10 flex h-full flex-col justify-between">
+          <div className="relative z-10 flex h-full flex-col gap-y-8">
             <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white text-[#5B5CFF] shadow-lg">
               <CreditCard size={24} />
             </div>
@@ -50,36 +52,47 @@ export default function BentoGridVendy() {
                 Encaissez en 1 clic et générez les factures automatiquement.
               </p>
             </div>
+
+            <Image
+              src="/images/logos/StripeSquare.svg"
+              alt="Logo Stripe"
+              width={50}
+              height={50}
+            />
           </div>
           {/* Forme géométrique pour le style 2026 */}
           <div className="absolute -top-16 -right-16 h-40 w-40 rounded-full border-[12px] border-white/10 transition-transform group-hover:rotate-12" />
         </div>
 
         {/* --- Bloc : Analytics (Remplissage du vide) --- */}
-        <div className="group relative col-span-12 md:col-span-4 row-span-2 overflow-hidden rounded-3xl bg-electricBlue p-8 transition-all hover:shadow-xl">
+        <div className="group relative col-span-12 order-2 md:col-span-4 md:order-1 row-span-2 overflow-hidden rounded-3xl bg-electricBlue p-8 transition-all hover:shadow-xl">
           <div className="relative z-10 flex h-full flex-col justify-between">
             <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white text-electricBlue">
               <BarChart3 size={24} />
             </div>
             <div>
               <h3 className="text-xl font-bold text-white">Data Real-time</h3>
-              <p className="text-slate-400 text-sm mt-2">
+              <p className="text-slate-200 text-sm mt-2">
                 Suivez vos conversions et vos revenus en temps réel.
               </p>
             </div>
-            <div className="h-24 w-full bg-white/5 rounded-lg flex items-end gap-1 p-2">
-              <div className="flex-1 bg-accent2 h-[40%] rounded-sm animate-pulse" />
-              <div className="flex-1 bg-accent2 h-[70%] rounded-sm" />
-              <div className="flex-1 bg-accent2 h-[50%] rounded-sm" />
-              <div className="flex-1 bg-accent2 h-[90%] rounded-sm" />
+            <div className="group h-24 w-full bg-white/5 rounded-lg flex items-end gap-1 p-2">
+              <div className="flex-1 bg-accent2 h-[40%] rounded-sm group-hover:animate-pulse" />
+              <div className="flex-1 bg-accent2 h-[70%] rounded-sm group-hover:animate-pulse" />
+              <div className="flex-1 bg-accent2 h-[50%] rounded-sm group-hover:animate-pulse" />
+              <div className="flex-1 bg-accent2 h-[90%] rounded-sm group-hover:animate-pulse" />
             </div>
+            <div className="absolute -top-16 -left-16 h-40 w-40 rounded-full border-[12px] border-white/10 transition-transform group-hover:rotate-12" />
           </div>
         </div>
 
         {/* --- Bloc Large : Boutique 2.0 --- */}
-        <div className="group relative col-span-12 md:col-span-8 row-span-2 overflow-hidden rounded-3xl border-2 border-black bg-white p-8 transition-all hover:shadow-2xl">
+        <div className="group relative col-span-12 order-1 md:col-span-8 md-order-2 row-span-2 overflow-hidden rounded-3xl bg-white p-8 transition-all hover:shadow-2xl">
           <div className="relative z-10 flex flex-col h-full items-start justify-between">
             <div className="w-full">
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-accent2 text-white">
+                <Store size={24} />
+              </div>
               <div className="mb-2 flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <Sparkles size={20} className="text-[#5B5CFF]" />
@@ -100,19 +113,23 @@ export default function BentoGridVendy() {
               </p>
             </div>
 
-            <button className="flex items-center gap-3 rounded-2xl bg-black px-8 py-4 font-bold text-white transition-all hover:bg-[#5B5CFF] hover:scale-[1.02] active:scale-95">
-              Lancer ma boutique <ArrowRight size={18} />
+            <button className="flex items-center gap-2 max-w-fit sm:w-auto bg-accent2 text-white font-bold py-2 px-4 rounded-2xl text-lg hover:gap-6 transition-all">
+              Lancer ma boutique
+              <ArrowRight size={18} />
             </button>
           </div>
 
-          {/* Subtle grid pattern background */}
+          {/* Décoration en arrière-plan */}
+          <div className="absolute -top-10 -right-10 h-64 w-64 rounded-full bg-[#5B5CFF]/5 transition-transform group-hover:scale-110" />
+
+          {/* Subtle grid pattern background
           <div
             className="absolute inset-0 opacity-[0.03] pointer-events-none"
             style={{
               backgroundImage: "radial-gradient(#000 1px, transparent 1px)",
               backgroundSize: "20px 20px",
             }}
-          />
+          /> */}
         </div>
       </div>
     </div>

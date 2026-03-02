@@ -1,7 +1,7 @@
 export default function TelephoneMockup() {
   return (
-    <div className=" relative ">
-      <div className="w-full max-w-[320px] mx-auto relative group">
+    <div className=" relative w-full flex justify-end">
+      <div className="w-full max-w-[320px] relative group">
         {/* Lueur subtile derrière l'iPhone */}
         <div className="absolute -inset-10 bg-indigo-500/10 blur-[100px] rounded-full opacity-50"></div>
 
