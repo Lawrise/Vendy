@@ -140,7 +140,7 @@ export default function Why() {
 
         <div className="col-span-6 group relative overflow-hidden rounded-[2.5rem] border border-slate-200 bg-white p-10 transition-all hover:shadow-xl">
           <div className="relative z-10 text-black">
-            <span className="inline-block px-4 py-1 rounded-full bg-electricBlue/20 text-black text-sm font-bold mb-6 backdrop-blur-md">
+            <span className="inline-block px-4 py-1 rounded-full bg-primary/20 text-black text-sm font-bold mb-6 backdrop-blur-md">
               Le Workflow Zen
             </span>
             <h3 className="text-3xl font-black mb-6 ">Avec Vendy</h3>
@@ -152,7 +152,7 @@ export default function Why() {
                 "Liberté totale de création",
               ].map((item, i) => (
                 <li key={i} className="flex items-center gap-3 font-bold">
-                  <CheckCircle className="text-accent2" size={20} />
+                  <CheckCircle className="text-secondary" size={20} />
                   {item}
                 </li>
               ))}
@@ -164,7 +164,7 @@ export default function Why() {
           {/* Forme géométrique rappelant le reste du site */}
           <div className="absolute -top-10 -left-10 h-48 w-48 rounded-full bg-slate-50 transition-transform group-hover:scale-110" />
           <Sparkles
-            className="absolute bottom-10 right-10 text-accent2 opacity-50 group-hover:rotate-12 transition-transform"
+            className="absolute bottom-10 right-10 text-secondary opacity-50 group-hover:rotate-12 transition-transform"
             size={40}
           />
           <LogoLong className="hidden lg:block absolute top-10 right-20 group-hover:scale-125 transition-all duration-500" />
