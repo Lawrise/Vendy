@@ -1,28 +1,22 @@
-import { CLientPov } from "@/components/landing/ClientPov";
-import Bentogrid from "../../components/landing/bentoGrid";
-import Header from "@/components/landing/Header";
 import Hero from "@/components/landing/Hero";
 import Why from "@/components/landing/Why";
-import { Button } from "@/components/ui/button";
 import { Flow } from "@/components/landing/Flow";
+import { Outils } from "@/components/landing/Outils";
+import WaitingList from "@/components/landing/WaitingList";
+import Footer from "@/components/landing/Footer";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-bgWhite text-myBlack font-sans flex  flex-col items-center">
-      <Header />
+    <div className="min-h-screen bg-bgWhite text-myBlack  flex  flex-col items-center">
+     
       <Hero />
-      <main className="flex flex-col gap-y-48 w-full">
+      <main className="flex flex-col justify-center items-center gap-y-54 w-full mt-24">
         <Why />
-        <div>
-          <h1 className="text-4xl font-bold text-center mb-12">
-            Les outils pour une reussite digitale
-          </h1>
-          <Bentogrid />
-        </div>
-        {/* Contenu au-dessus du fond */}
         <Flow />
+        <Outils />
+        <WaitingList />
       </main>
-      <footer className="h-96"></footer>
+      <Footer />
     </div>
   );
 }
