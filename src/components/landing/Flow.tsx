@@ -27,7 +27,7 @@ export function Flow() {
         description="Un portail de marque blanche qui rassure vos clients et valorise votre travail."
       />
 
-      <div className="flex justify-start gap-x-6 mb-20">
+      <div className="flex justify-center gap-x-6 mb-20 w-full">
         <Button
           variant={activePov === "client" ? "default" : "outline"}
           onClick={() => setActivePov("client")}

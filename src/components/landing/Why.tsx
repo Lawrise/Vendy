@@ -7,9 +7,8 @@ export default function Why() {
   return (
     <div className="relative max-w-6xl w-full">
       <Title
-        title="Renvoyer une image"
-        surligne=" professionnelle"
-        description="Un espace organisé ou le client peut payer, suivre sa commande et collaborer en toute confiance."
+        title="Offrez une expérience professionnelle à vos clients."
+        surligne=" "
       />
       <div></div>
       {/* <h2 className="text-6xl font-extrabold text-start mb-4 tracking-tight">
@@ -76,7 +75,7 @@ export default function Why() {
         {/* Colonne : APRES (Le Workflow) */}
         <div className="col-span-6 group relative overflow-hidden rounded-2xl  bg-white p-10 transition-all hover:shadow-xl">
           <div className="relative z-10 text-black">
-            <span className="inline-block px-4 py-1 rounded-full bg-primary text-white text-sm font-bold mb-6 backdrop-blur-md">
+            <span className="inline-block px-4 py-1 rounded-full bg-primary-100 text-zinc-800 text-sm font-bold mb-6 backdrop-blur-md">
               Le Workflow structuré
             </span>
             <h3 className="text-3xl font-black mb-6 ">Avec Vendy</h3>
@@ -88,7 +87,7 @@ export default function Why() {
                 "Une image professionnelle sans effort",
               ].map((item, i) => (
                 <li key={i} className="flex items-center gap-3 font-bold">
-                  <CheckCircle className="text-secondary" size={20} />
+                  <CheckCircle className="text-primary" size={20} />
                   {item}
                 </li>
               ))}

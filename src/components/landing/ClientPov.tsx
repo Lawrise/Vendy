@@ -19,9 +19,9 @@ export function ClientPov() {
 
       {/* === VUE PC (Dashboard Freelance) === */}
       <div
-        className="absolute transition-all duration-700 ease-in-out left-0 top-16" // 16 d'ecart avec top tel
+        className="absolute transition-all duration-500 ease-in-out top-16" // 16 d'ecart avec top tel
         style={{
-          transform: step === 1 ? " scale(0.9)" : "translateX(55%) scale(1)",
+          transform: step === 1 ? " scale(0.9)" : "translateX(35%) scale(1)",
           opacity: step === 1 ? 0 : 1,
         }}
       >
@@ -98,10 +98,10 @@ export function ClientPov() {
 
       {/* === VUE TÉLÉPHONE === */}
       <div
-        className="absolute transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] z-20 left-0"
-        // style={{
-        //   transform: step === 0 ? "translateX(-100%)" : "translateX(0%)",
-        // }}
+        className="absolute transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] z-20"
+        style={{
+          transform: step === 0 ? "translateX(-100%)" : "translateX(0%)",
+        }}
       >
         <div className="w-72 h-138 bg-white rounded-[40px] flex flex-col shadow-[0_15px_40px_rgba(0,0,0,0.08)] border border-zinc-200 p-6 overflow-hidden relative">
           {step === 1 ? (
@@ -200,7 +200,7 @@ export function ClientPov() {
           )}
         </div>
       </div>
-      <div className="flex flex-col items-start justify-end  w-full p-2">
+      <div className="flex flex-col items-center justify-end  w-full p-2">
         {step === 1 ? (
           <div className="w-fit h-fit  rounded-full text-md font-bold s">
             Cliquez sur Commander pour tester !

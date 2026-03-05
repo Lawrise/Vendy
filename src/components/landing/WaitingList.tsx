@@ -2,14 +2,14 @@ import Title from "../ui/Title";
 
 export default function WaitingList() {
   return (
-    <section className="bg-white rounded-4xl py-24 px-8 w-full max-w-6xl">
+    <section className="bg-white rounded-4xl py-24 px-8 w-full max-w-6xl text-center">
       <div className="w-full">
         <Title
           title="Soyez les premiers. Restez organisés."
           description="Vendy arrive bientôt. Rejoignez la bêta privée et simplifiez les paiements et la collaboration client dès le premier jour."
         />
 
-        <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-start">
+        <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
           <input
             type="email"
             placeholder="Your email"
