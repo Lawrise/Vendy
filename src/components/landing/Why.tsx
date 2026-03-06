@@ -20,7 +20,7 @@ export default function Why() {
 
       <div className="grid grid-cols-1 md:grid-cols-12 gap-12  mx-auto relative">
         {/* Colonne : AVANT (Le Chaos) */}
-        <div className="col-span-6 lg:col-span-6 group relative overflow-hidden rounded-2xl bg-white p-6 md:p-10 transition-all hover:shadow-xl min-h-100 flex flex-col">
+        <div className="col-span-6 lg:col-span-6 group relative overflow-hidden rounded-2xl p-6 md:p-10 transition-all border border-gray-200 hover:border-gray-400 min-h-100 flex flex-col">
           <div className=" z-10">
             <span className="inline-block px-4 py-1 rounded-full bg-zinc-100 text-zinc-800 text-sm font-bold mb-6">
               Le chaos opérationnel
@@ -73,7 +73,7 @@ export default function Why() {
           {/* <div className="z-0 absolute -bottom-12 -right-12 h-64 w-64 rounded-full bg-slate-50 group-hover:scale-110 transition-transform" /> */}
         </div>
         {/* Colonne : APRES (Le Workflow) */}
-        <div className="col-span-6 group relative overflow-hidden rounded-2xl  bg-white p-10 transition-all hover:shadow-xl">
+        <div className="col-span-6 group relative overflow-hidden rounded-2xl  bg-white p-10 border border-gray-200 transition-all hover:border-gray-400 min-h-100 flex flex-col">
           <div className="relative z-10 text-black">
             <span className="inline-block px-4 py-1 rounded-full bg-primary-100 text-zinc-800 text-sm font-bold mb-6 backdrop-blur-md">
               Le Workflow structuré

@@ -10,7 +10,7 @@ type Pov = "client" | "vous";
 export function Flow() {
   const [activePov, setActivePov] = useState<Pov>("vous");
   return (
-    <div className=" flex flex-col  max-w-6xl w-full justify-center items-start bg-white py-24 px-8 rounded-4xl">
+    <div className=" flex flex-col  max-w-6xl w-full justify-center items-start bg-white px-8 rounded-4xl">
       {/* Fond full-bleed + penché */}
       {/* <div className="absolute w-screen left-1/2 -translate-x-1/2 inset-0 bg-primary skew-y-3 origin-top-left" /> */}
       {/* <h1 className="relative text-6xl font-bold text-start tracking-tight text-black mb-4 w-full">
