@@ -1,5 +1,4 @@
-import { ArrowRight } from "lucide-react";
-import Image from "next/image";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -7,19 +6,28 @@ export default function Hero() {
       <div className="grid grid-cols-1 lg:grid-cols-2 max-w-7xl w-full gap-12 items-center">
         {/* Colonne Texte */}
         <div className="flex flex-col items-start gap-8 text-start max-w-3xl">
-          <h1 className="text-4xl md:text-6xl font-bold leading-[1.05] tracking-tight">
-            Ne laissez plus le travail client devenir un chaos opérationnel.
+          <h1 className="text-4xl md:text-6xl font-heading font-extrabold leading-[1.05] tracking-tight">
+            Vendez, collaborez et livrez <span className="">au même endroit</span>
           </h1>
 
-          <p className="text-lg md:text-xl text-gray-800 leading-relaxed">
-            La plateforme tout-en-un pour les créateurs qui délivrent. Encaissez
-            vos paiements, gérez vos briefs et livrez vos fichiers dans un
-            portail client unique et automatisé.
-          </p>
+          <ul>
+            <li className="flex items-center gap-2 mb-4 text-lg text-gray-700">
+              <CheckCircle2 className="text-green-500" /> Un lien en bio pro
+              pour vendre vos services en 30 secondes.
+            </li>
+            <li className="flex items-center gap-2 mb-4 text-lg text-gray-700">
+              <CheckCircle2 className="text-green-500" /> Un portail client pour
+              valider chaque étape sans un seul mail.
+            </li>
+            <li className="flex items-center gap-2 mb-4 text-lg text-gray-700">
+              <CheckCircle2 className="text-green-500" /> Verrouillez vos
+              livrables jusqu&apos;au règlement complet du solde.
+            </li>
+          </ul>
 
           <div className="flex flex-col gap-4">
-            <button className="flex items-center gap-2 bg-black text-white font-semibold py-4 px-10 rounded-2xl text-lg hover:gap-4 transition-all w-fit">
-              Rejoindre la liste d’attente
+            <button className="flex items-center gap-2 bg-primary text-white font-semibold py-4 px-10 rounded-2xl text-lg hover:gap-4 transition-all w-fit">
+              Rejoindre la liste d&apos;attente
               <ArrowRight size={20} />
             </button>
             <p className="text-sm text-gray-700">

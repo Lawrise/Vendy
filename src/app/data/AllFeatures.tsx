@@ -3,10 +3,8 @@ import {
   ClipboardCheck,
   CreditCard,
   FolderLock,
-  GanttChart,
   Layers,
   LayoutList,
-  Pen,
 } from "lucide-react";
 
 export interface FeatureInterface {

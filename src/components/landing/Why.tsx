@@ -25,7 +25,7 @@ export default function Why() {
             <span className="inline-block px-4 py-1 rounded-full bg-zinc-100 text-zinc-800 text-sm font-bold mb-6">
               Le chaos opérationnel
             </span>
-            <h3 className="text-3xl font-black text-slate-800 mb-6">
+            <h3 className="text-3xl font-semibold text-slate-800 mb-6 font-heading">
               Actuellement
             </h3>
             <ul className="space-y-4">
