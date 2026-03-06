@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden pt-32 pb-56 bg-white rounded-b-4xl w-full px-6 md:px-12 flex flex-col items-center">
+    <section className="relative overflow-hidden py-24 bg-white rounded-b-4xl w-full px-6 md:px-12 flex flex-col items-center">
       <div className="grid grid-cols-1 lg:grid-cols-2 max-w-7xl w-full gap-12 items-center">
         {/* Colonne Texte */}
         <div className="flex flex-col items-start gap-8 text-start max-w-3xl">
@@ -29,7 +29,7 @@ export default function Hero() {
         </div>
 
         {/* Colonne Mockup (C'est ici que ça se joue) */}
-        <div className="relative w-full h-[500px] md:h-[600px] lg:h-[700px] drop-shadow-2xl">
+        <div className="relative w-full  drop-shadow-2xl">
           {/* <Image
             src="/images/tel4.png"
             alt="Hero Image"

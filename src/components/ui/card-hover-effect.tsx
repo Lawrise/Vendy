@@ -11,7 +11,6 @@ export const HoverEffect = ({
   items: {
     title: string;
     description: string;
-    link: string;
     icon: React.ReactNode;
     replace?: string[];
     blend?: string[];
@@ -24,15 +23,14 @@ export const HoverEffect = ({
   return (
     <div
       className={cn(
-        "grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3",
+        "grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4",
         className,
       )}
     >
       {items.map((item, idx) => (
-        <Link
-          href={item?.link}
-          key={item?.link}
-          className="relative group  flex flex-col h-full w-full p-4"
+        <div
+          key={item?.title}
+          className="relative group  flex flex-col h-full w-full p-2"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
@@ -55,7 +53,9 @@ export const HoverEffect = ({
           </AnimatePresence>
           <Card>
             <div className="w-full flex justify-center items-center text-4xl ">
-              <div className="w-fit p-2 border rounded-lg text-primary">{item.icon}</div>
+              <div className="w-fit p-2 border rounded-lg text-primary">
+                {item.icon}
+              </div>
             </div>
             <CardTitle>{item.title}</CardTitle>
             <CardDescription className="mb-8 hidden md:block">
@@ -86,7 +86,7 @@ export const HoverEffect = ({
               </div>
             )}
           </Card>
-        </Link>
+        </div>
       ))}
     </div>
   );

@@ -5,23 +5,21 @@ import { Logo } from "../assets/Logo";
 import {
   Archive,
   ChartColumn,
-  ChevronsUp,
   Copy,
   LogOutIcon,
   MessageSquareQuote,
   PanelLeftOpen,
-  Plus,
   Settings,
   ShoppingBag,
   Store,
-  Triangle,
 } from "lucide-react";
+import Image from "next/image";
 
 export default function AllFeature() {
   return (
     <div className="max-w-6xl">
       <Title
-        title="Tout vos outils connectés en"
+        title="Tous vos outils connectés en"
         surligne="un seul endroit"
         description="Un portail de marque blanche qui rassure vos clients et valorise votre travail."
       />
@@ -68,58 +66,156 @@ export default function AllFeature() {
             </ul>
           </div>
         </div>
-        <div className="w-4/5 p-8 bg-white relative overflow-hidden">
-          {/* En-tête du Dashboard */}
-          <div className="flex justify-between items-center mb-8">
-            <h3 className="text-xl font-bold text-gray-800">Bonjour Sarah !</h3>
+
+        <div className="w-4/5 p-10 bg-white relative overflow-y-hidden h-full font-sans rounded-2xl">
+          {/* Header Solopreneur */}
+          <div className="flex justify-between items-center mb-10">
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 tracking-tight">
+                Bonjour Sarah 👋
+              </h3>
+              <p className="text-xs text-gray-400 mt-1 flex items-center gap-1.5">
+                <span className="h-1.5 w-1.5 rounded-full bg-blue-500 animate-pulse" />
+                3 factures en attente de paiement
+              </p>
+            </div>
+            <div className="flex items-center gap-3">
+              <div className="text-right hidden sm:block">
+                <p className="text-xs font-bold text-gray-900">Sarah Design</p>
+                <p className="text-[10px] text-gray-400 font-medium px-1.5 py-0.5 bg-gray-100 rounded">
+                  Freelance
+                </p>
+              </div>
+              <div className="h-10 w-10 rounded-full bg-slate-200 border border-gray-100 shadow-sm overflow-hidden">
+                <Image
+                  src="/images/avatar.svg"
+                  alt="Avatar"
+                  width={40}
+                  height={40}
+                />
+              </div>
+            </div>
           </div>
 
-          {/* Simulation de stats */}
-          <div className="grid grid-cols-3 gap-4 mb-8">
-            <div className="flex flex-col justify-center items-start p-4 border border-gray-100 rounded-xl bg-gray-100">
-              <p className="mb-2 text-gray-500">REVENUE TOTAL</p>
-              <div className="flex items-center gap-4">
-                <p>$4,056.00</p>
-                <div className="flex items-center font-bold">
-                  <Triangle className="inline h-3 w-4 text-green-500 fill-green-500" />
-                  <p className="text-green-500">56%</p>
+          {/* Stats Grid - Réaliste (Objectif ~5k€/mois) */}
+          <div className="grid grid-cols-3 gap-6 mb-12">
+            {[
+              {
+                label: "CHIFFRE D'AFFAIRES (MOIS)",
+                value: "5 420 €",
+                trend: "+12%",
+                color: "text-green-500",
+              },
+              {
+                label: "REVENU NET ESTIMÉ",
+                value: "3 250 €",
+                trend: "-5% frais",
+                color: "text-amber-500",
+              },
+              {
+                label: "TEMPS FACTURÉ",
+                value: "124h",
+                trend: "82% cap.",
+                color: "text-blue-500",
+              },
+            ].map((stat, i) => (
+              <div
+                key={i}
+                className="flex flex-col p-6 border border-gray-100 rounded-2xl bg-white hover:shadow-sm transition-all"
+              >
+                <p className="text-[10px] font-bold text-gray-400 tracking-widest uppercase mb-3">
+                  {stat.label}
+                </p>
+                <div className="flex items-baseline justify-between">
+                  <p className="text-2xl font-bold text-gray-800">
+                    {stat.value}
+                  </p>
+                  <span
+                    className={`text-[10px] font-bold ${stat.color} bg-gray-50 px-2 py-0.5 rounded-md`}
+                  >
+                    {stat.trend}
+                  </span>
                 </div>
               </div>
-            </div>
-            <div className="flex flex-col justify-center items-start p-4 border border-gray-100 rounded-xl bg-gray-100">
-              <p className="mb-2 text-gray-500">COMMANDES TOTALES</p>
-              <div className="flex items-center gap-4">
-                <p>562</p>
-                <div className="flex items-center font-bold">
-                  <Plus className="inline h-3 w-4 text-green-500 fill-green-500" />
-                  <p className="text-green-500">52 ce mois</p>
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-col justify-center items-start p-4 border border-gray-100 rounded-xl bg-gray-100">
-              <p className="mb-2 text-gray-500">Vue de boutique</p>
-              <div className="flex items-center gap-4">
-                <p>18 923</p>
-                <div className="flex items-center font-bold">
-                  <Triangle className="inline h-3 w-4 text-green-500 fill-green-500" />
-                  <p className="text-green-500">56%</p>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
-          <div className="flex justify-between items-center mb-8">
-            <h3 className="text-xl font-bold text-gray-800">
-              Projets en cours
-            </h3>
-          </div>
-          <div className="border border-gray-200 rounded-2xl p-4 mb-8 bg-gray-50/30">
-            Montage de rush
 
+          {/* Workflow Section */}
+          <div className="flex justify-between items-end mb-6">
+            <div>
+              <h3 className="text-lg font-bold text-gray-900">
+                Missions en cours
+              </h3>
+              <p className="text-xs text-gray-500 font-medium">
+                Suivi de tes livrables client
+              </p>
+            </div>
           </div>
-          {/* Simulation d'un graphique ou d'une liste */}
-          <div className="w-full h-64 border border-dashed border-gray-200 rounded-2xl flex flex-col items-center justify-center text-gray-400 bg-gray-50/30">
-            <ChartColumn className="h-10 w-10 mb-2 opacity-20" />
-            <p className="text-sm">Données en cours de synchronisation...</p>
+
+          <div className="space-y-4">
+            {[
+              {
+                title: "Refonte Site Web",
+                client: "Cabinet Dupuis",
+                progress: 80,
+                color: "bg-indigo-500",
+                date: "Échéance : 12 Mars",
+              },
+              {
+                title: "Identité Visuelle",
+                client: "Thomas (Coaching)",
+                progress: 30,
+                color: "bg-orange-400",
+                date: "Attente retour",
+              },
+              {
+                title: "Maintenance Mensuelle",
+                client: "SaaS Start",
+                progress: 100,
+                color: "bg-green-500",
+                date: "Terminé",
+              },
+            ].map((project, i) => (
+              <div
+                key={i}
+                className="group border border-gray-100 p-5 rounded-2xl bg-white hover:border-blue-100 transition-all shadow-[0_2px_8px_rgba(0,0,0,0.02)]"
+              >
+                <div className="flex justify-between items-start mb-4">
+                  <div className="flex items-center gap-4">
+                    <div
+                      className={`h-10 w-10 rounded-xl ${project.color} flex items-center justify-center font-bold text-white text-xs`}
+                    >
+                      {project.title.substring(0, 2).toUpperCase()}
+                    </div>
+                    <div>
+                      <p className="text-sm font-bold text-gray-800 tracking-tight">
+                        {project.title}
+                      </p>
+                      <p className="text-xs text-gray-400 italic">
+                        Client : {project.client}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="text-right">
+                    <p className="text-[10px] font-bold text-gray-400 uppercase mb-1">
+                      {project.date}
+                    </p>
+                    <div className="flex items-center gap-2">
+                      <p className="text-xs font-bold text-gray-700">
+                        {project.progress}%
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="w-full bg-gray-100 rounded-full h-1.5 overflow-hidden">
+                  <div
+                    className={`${project.color} h-full rounded-full`}
+                    style={{ width: `${project.progress}%` }}
+                  />
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
