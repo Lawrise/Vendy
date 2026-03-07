@@ -3,7 +3,7 @@ import Title from "../ui/Title";
 
 export function StoreToDash() {
   return (
-    <div className=" flex flex-col  max-w-6xl w-full justify-center items-start">
+    <div className="flex flex-col max-w-6xl w-full justify-center items-start bg-white rounded-4xl">
       <Title
         title="Passez du paiement à la collaboration"
         surligne="en un éclair."
