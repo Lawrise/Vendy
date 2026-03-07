@@ -1,10 +1,10 @@
 import Hero from "@/components/landing/Hero";
 import Why from "@/components/landing/Why";
-import { Flow } from "@/components/landing/Flow";
-import { Outils } from "@/components/landing/Outils";
+import { StoreToDash } from "@/components/landing/StoreToDash";
 import WaitingList from "@/components/landing/WaitingList";
 import Footer from "@/components/landing/Footer";
 import AllFeature from "@/components/landing/AllFeature";
+import Process from "@/components/landing/Process";
 
 export default function Home() {
   return (
@@ -12,8 +12,9 @@ export default function Home() {
      
       <Hero />
       <main className="flex flex-col justify-center items-center gap-y-45 w-full mt-24">
-        <Flow />
+        <StoreToDash />
         <AllFeature />
+        <Process />
         <Why />
         <WaitingList />
       </main>

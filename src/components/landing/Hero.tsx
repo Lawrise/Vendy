@@ -7,21 +7,24 @@ export default function Hero() {
         {/* Colonne Texte */}
         <div className="flex flex-col items-start gap-8 text-start max-w-3xl">
           <h1 className="text-4xl md:text-6xl font-heading font-extrabold leading-[1.05] tracking-tight">
-            Vendez, collaborez et livrez <span className="">au même endroit</span>
+            Vendez, collaborez et livrez{" "}
+            <span className="">au même endroit</span>
           </h1>
 
           <ul>
             <li className="flex items-center gap-2 mb-4 text-lg text-gray-700">
-              <CheckCircle2 className="text-green-500" /> Un lien en bio pro
-              pour vendre vos services en 30 secondes.
+              <CheckCircle2 className="text-green-500" /> Transformez votre lien
+              en bio en boutique pro avec paiement sécurisé intégré.
             </li>
             <li className="flex items-center gap-2 mb-4 text-lg text-gray-700">
-              <CheckCircle2 className="text-green-500" /> Un portail client pour
-              valider chaque étape sans un seul mail.
+              <CheckCircle2 className="text-green-500" />
+              Récupérez toutes les ressources nécessaires via un onboarding
+              structuré et intelligent.
             </li>
             <li className="flex items-center gap-2 mb-4 text-lg text-gray-700">
-              <CheckCircle2 className="text-green-500" /> Verrouillez vos
-              livrables jusqu&apos;au règlement complet du solde.
+              <CheckCircle2 className="text-green-500" />
+              Offrez un portail privé à vos clients pour suivre l&apos;évolution
+              et valider chaque étape du livrable.
             </li>
           </ul>
 
