@@ -11,13 +11,12 @@ export default function Header() {
         </p>
       </div>
       <ul className="hidden md:flex items-center gap-8">
-        <Link href="/" className="text-primary font-bold hover:text-primary/80 transition">
+        <Link
+          href="/"
+          className="text-primary font-bold hover:text-primary/80 transition"
+        >
           Home
         </Link>
-        <Link href="mission" className="text-primary font-bold hover:text-primary/80 transition">
-          Notre mission
-        </Link>
-        
       </ul>
       <p className="text-primary">Contact</p>
     </header>
