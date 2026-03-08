@@ -6,7 +6,7 @@ import {
   ShoppingBag,
   Store,
 } from "lucide-react";
-import { Logo } from "../assets/Logo";
+import { Logo } from "../../assets/Logo";
 
 interface PcViewDemoProps {
   setHasOrdered: (value: boolean) => void;

@@ -1,5 +1,5 @@
 import { ClientPov } from "./ClientPov";
-import Title from "../ui/Title";
+import Title from "../../ui/Title";
 
 export function StoreToDash() {
   return (

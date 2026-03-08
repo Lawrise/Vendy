@@ -1,7 +1,7 @@
-import { HoverEffect } from "../ui/card-hover-effect";
+import { HoverEffect } from "../../ui/card-hover-effect";
 import { FEATURES } from "@/app/data/AllFeatures";
-import Title from "../ui/Title";
-import { Logo } from "../assets/Logo";
+import Title from "../../ui/Title";
+import { Logo } from "../../assets/Logo";
 import {
   Archive,
   ChartColumn,
