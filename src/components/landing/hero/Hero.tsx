@@ -1,4 +1,5 @@
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -13,18 +14,18 @@ export default function Hero() {
 
           <ul>
             <li className="flex items-center gap-2 mb-4 text-lg text-gray-700">
-              <CheckCircle2 className="text-green-500" /> Transformez votre lien
-              en bio en boutique pro avec paiement sécurisé intégré.
+              <CheckCircle2 className="text-green-500" /> Boutique pro
+              configurée en 2 minutes avec paiements sécurisés.
             </li>
             <li className="flex items-center gap-2 mb-4 text-lg text-gray-700">
               <CheckCircle2 className="text-green-500" />
-              Récupérez toutes les ressources nécessaires via un onboarding
-              structuré et intelligent.
+              Récupérez automatiquement les fichiers et infos de vos clients
+              après l&apos;achat.
             </li>
             <li className="flex items-center gap-2 mb-4 text-lg text-gray-700">
               <CheckCircle2 className="text-green-500" />
-              Offrez un portail privé à vos clients pour suivre l&apos;évolution
-              et valider chaque étape du livrable.
+              Espace client privé pour valider vos étapes et envoyer vos
+              fichiers finaux.
             </li>
           </ul>
 
@@ -40,15 +41,13 @@ export default function Hero() {
         </div>
 
         {/* Colonne Mockup (C'est ici que ça se joue) */}
-        <div className="relative w-full  drop-shadow-2xl">
-          {/* <Image
-            src="/images/tel4.png"
-            alt="Hero Image"
-            fill
-            priority // Charge l'image immédiatement (important pour le Hero)
-            className="object-contain" // Empêche de couper le haut ou le bas du tel
-            sizes="(max-width: 1024px) 100vw, 50vw"
-          /> */}
+        <div className="relative w-full h-full flex flex-col justify-end drop-shadow-2xl">
+          <Image
+            src={"/images/HeroImage.png"}
+            alt="hero"
+            width={200}
+            height={100}
+          />
         </div>
       </div>
     </section>
