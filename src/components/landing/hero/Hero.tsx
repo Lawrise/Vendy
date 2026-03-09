@@ -4,15 +4,15 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section className="relative overflow-hidden py-24 bg-white rounded-b-4xl w-full px-6 md:px-12 flex flex-col items-center">
-      <div className="grid grid-cols-1 lg:grid-cols-2 max-w-7xl w-full gap-12 items-center">
+      <div className="flex flex-col max-w-7xl w-full gap-12 items-center">
         {/* Colonne Texte */}
-        <div className="flex flex-col items-start gap-8 text-start max-w-3xl">
+        <div className="flex flex-col items-center gap-8 text-center max-w-3xl">
           <h1 className="text-4xl md:text-6xl font-heading font-extrabold leading-[1.05] tracking-tight">
             Vendez, collaborez et livrez{" "}
             <span className="">au même endroit</span>
           </h1>
 
-          <ul>
+          <ul className="flex flex-col items-center">
             <li className="flex items-center gap-2 mb-4 text-lg text-gray-700">
               <CheckCircle2 className="text-green-500" /> Boutique pro
               configurée en 2 minutes avec paiements sécurisés.
@@ -41,12 +41,13 @@ export default function Hero() {
         </div>
 
         {/* Colonne Mockup (C'est ici que ça se joue) */}
-        <div className="relative w-full h-full flex flex-col justify-end drop-shadow-2xl">
+        <div className="relative w-full aspect-square lg:aspect-video drop-shadow-2xl">
           <Image
-            src={"/images/HeroImage.png"}
+            src="/images/HeroImage.png"
             alt="hero"
-            width={200}
-            height={100}
+            fill
+            className="object-contain" // ou "object-cover" selon si tu veux rogner ou voir l'image entière
+            priority // Recommandé car c'est l'image principale au-dessus du pli
           />
         </div>
       </div>

@@ -38,7 +38,7 @@ export default function Process() {
   return (
     <div>
       <Title
-        title="Impressioné vos client du début à la fin"
+        title="Impressionez vos client du début à la fin"
         description="Faite monter vos prix en proposant une experience de travail professionelle à vos client"
       />
       <StepLayout>
@@ -51,7 +51,7 @@ export default function Process() {
         <PageBuildDemo />
       </StepLayout>
       <StepLayout>
-        <div className="lg:col-span-6 bg-amber-50 rounded-[2.5rem] h-[500px] flex items-center justify-center">
+        <div className="lg:col-span-6 bg-amber-50 rounded-[2.5rem] h-150 flex items-center justify-center">
           <p className="text-amber-400 font-bold italic">
             Ici un autre composant visuel différent...
           </p>
@@ -102,7 +102,7 @@ export default function Process() {
             },
           ]}
         />
-        <div className="lg:col-span-6 bg-blue-50 rounded-[2.5rem] h-[500px] flex items-center justify-center">
+        <div className="lg:col-span-6 bg-blue-50 rounded-[2.5rem] h-150 flex items-center justify-center">
           <p className="text-blue-400 font-bold italic">
             Ici un autre composant visuel différent...
           </p>
@@ -111,7 +111,7 @@ export default function Process() {
         {/* Un visuel montrant un bouton "Approve" ou "Request changes" */}
       </StepLayout>
       <StepLayout>
-        <div className="lg:col-span-6 bg-green-50 rounded-[2.5rem] h-[500px] flex items-center justify-center">
+        <div className="lg:col-span-6 bg-green-50 rounded-[2.5rem] h-150 flex items-center justify-center">
           {/* Un visuel de facture propre ou une barre de progression de paiement */}
           <p className="text-green-600 font-bold">
             Visuel : Paiement sécurisé & Acomptes
