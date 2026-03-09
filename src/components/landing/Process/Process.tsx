@@ -15,6 +15,7 @@ import {
 import StepLayout from "./StepProcess";
 import ProcessText from "./ProcessText";
 import PageBuildDemo from "./PageBuildDemo";
+import Image from "next/image";
 
 const builderFeatures = [
   {
@@ -44,17 +45,27 @@ export default function Process() {
       <StepLayout>
         <ProcessText
           id={1}
-          title="Construise votre boutique en 30 secondes"
+          title="Construisez votre boutique en 30 secondes"
           subtitle="Pas besoin de skills technique, on vous guide pas à pas pour créer et partager votre boutique simplement."
           features={builderFeatures}
         />
-        <PageBuildDemo />
+        <div className="lg:col-span-6 relative w-full aspect-4/3 flex rounded-4xl ">
+          <Image
+            src="/images/PageBuilder.png"
+            alt="Page Build Demo"
+            fill
+            className="object-contain"
+          />
+        </div>
       </StepLayout>
       <StepLayout>
-        <div className="lg:col-span-6 bg-amber-50 rounded-[2.5rem] h-150 flex items-center justify-center">
-          <p className="text-amber-400 font-bold italic">
-            Ici un autre composant visuel différent...
-          </p>
+        <div className="lg:col-span-6 relative w-full aspect-4/3 flex rounded-4xl ">
+          <Image
+            src="/images/onBoadingPage.png"
+            alt="Process Step 2"
+            fill
+            className="object-contain"
+          />
         </div>
         <ProcessText
           id={2}
